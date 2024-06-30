@@ -1,0 +1,58 @@
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1{
+    font-size: 40px;
+    margin: 30px;
+  }
+
+  #service {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    .card {
+      display: flex;
+      border: 1px solid #6a6a6a;
+      box-shadow: 0 0 20px #666;
+
+      flex-direction: column;
+      padding: 30px;
+      width: 300px;
+      align-items: center;
+      border-radius: 10px;
+      transition: all 0.5s;
+      & i {
+        color: #f4ca27;
+        font-size: xx-large;
+      }
+      & p {
+        text-align: center;
+        font-size: 12px;
+      }
+      & button{
+        background-color: #f4ca27;
+        color: black;
+        padding: 10px 20px;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        transition: all 0.5s;
+      }
+      & button:hover{
+        background-color: black;
+        color: white;
+      }
+    }
+
+    .card:hover {
+      box-shadow: 0 0 20px #f4cb27;
+      transform: scale(1.1);
+    }
+  }
+}

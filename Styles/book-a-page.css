@@ -1,0 +1,33 @@
+#book-a-call{
+    background-color: #f4ca27;
+    padding: 70px;
+
+
+    & h1{
+padding: 10px;
+font-size: 40px;
+}
+& p{
+        font-size: 20px;
+        padding: 10px;
+    }
+    & div {
+        display: flex;
+        justify-content: end;
+
+        & button{
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: black;
+            font-weight: 700;
+            transition: all 0.5s;
+        }
+        & button:hover{
+            background-color: black;
+            color:white; 
+
+        }
+    }
+}

@@ -1,0 +1,38 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    & img{
+        width: 100px;
+        object-fit: cover;
+    }
+    & ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        & li{
+            cursor: pointer;
+        }
+        & li:hover{
+            font-weight: 600;
+        }
+    }
+    & button{
+        background-color:#F4CA27;
+        color: black;
+        border-radius: 10px;
+        border: none;
+        font-weight: 600;
+        box-shadow: 2px 0 12px rgba(0, 0, 0, 0.183) ;
+        padding: 10px 20px;
+        transition: all 0.5s;
+    }
+    & button:hover{
+        background-color: black;
+        color: white;
+
+    }
+}
+

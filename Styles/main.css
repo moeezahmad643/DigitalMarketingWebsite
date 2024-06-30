@@ -1,0 +1,37 @@
+#main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  & div {
+    overflow: hidden;
+    width: 400px;
+    position: relative;
+    padding: 10px;
+    padding-top: 90px;
+    gap: 10px;
+    border: 1px solid #221b00;
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.509);
+    & h3 {
+      font-size: x-large;
+    }
+    & p {
+      padding: 10px 0px;
+    }
+
+    & span {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      z-index: -1;
+      left: -20px;
+      top: -20px;
+      border-radius: 100px;
+      background-color: #f4ca27;
+      font-size: x-large;
+      display: grid;
+      place-items: center;
+    }
+  }
+}
