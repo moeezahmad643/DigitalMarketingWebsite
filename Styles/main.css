@@ -35,3 +35,14 @@
     }
   }
 }
+
+@media screen and (max-width:1000px) {
+  #main{
+      flex-wrap: wrap;
+      justify-content: center;
+      & div{
+        width: 100%;
+      }
+
+  }
+}

@@ -1,7 +1,9 @@
 #our-work {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
+  padding: 20px;
 
   .card {
     width: 500px;
@@ -27,5 +29,17 @@
   }
   .card:hover {
     transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  #our-work .card {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #our-work .card {
+    width: 900%;
   }
 }

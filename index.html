@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="Styles/services.css">
     <link rel="stylesheet" href="Styles/our-work.css">
     <link rel="stylesheet" href="Styles/contact-form.css">
+    <script src="Script/navbar.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* border: 1px solid red; */
         }
     </style>
 </head>
@@ -28,16 +30,21 @@
 <body>
     <nav>
         <img src="logo.png" alt="">
-        <ul>
+        <ul id="menuList">
             <li>About</li>
             <li>Services</li>
             <li>Hire Team</li>
             <li>Blog</li>
             <li>Contact</li>
         </ul>
-        <button>
-            Get in Touch
-        </button>
+        <div id="buttons">
+            <button id="GetInTouch">
+                Get in Touch
+            </button>
+            <button id="menuBtn" onclick="ToggleNavMenu()">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
     </nav>
 
     <header>
@@ -68,28 +75,28 @@
                 certain project. They thoroughly inspect the scope, the business goals, and the available technical base
                 to create a desired web or mobile application for</p>
         </div>
-        <div  data-aos="fade-up">
+        <div data-aos="fade-up">
             <span>2</span>
             <h3>You Can Control</h3>
             <p>When you work with our expert mobile app developers or hire an entire team for your project, it will be
                 you who will control them from the beginning till the final delivery. You can get day-to-day updates and
                 control the project at every step according to your </p>
         </div>
-        <div  data-aos="fade-up">
+        <div data-aos="fade-up">
             <span>3</span>
             <h3>Utilize Our Expertise</h3>
             <p>At Business Pro Digital, you can get the chance to work with highly talented and experienced
                 professionals from different fields. They will work as an extended part of your team, and you can
                 utilize their skills for your business growth.</p>
         </div>
-        <div  data-aos="fade-up">
+        <div data-aos="fade-up">
             <span>4</span>
             <h3>Hassle-Free Production</h3>
             <p>From listing your requirements to preparing the layout to develop the app to testing the final product
                 and helping you in the maintenance of the app we will take full responsibility for hassle free
-                production.production.production.production.</p>
+                production production production production.</p>
         </div>
-        <div  data-aos="fade-up">
+        <div data-aos="fade-up">
             <span>5</span>
             <h3>Zero Overheads</h3>
             <p>There will be no hidden costs or added fees for any service that you do not use or do not require. Our
@@ -100,7 +107,8 @@
 
     <section id="book-a-call">
         <h1 data-aos="fade-right">CONSULT WITH OUR CORE TEAM</h1>
-        <p data-aos="fade-right">Take a look at our most popular Backend, Frontend, and Stacks for Mobile App Development. You can hire us for
+        <p data-aos="fade-right">Take a look at our most popular Backend, Frontend, and Stacks for Mobile App
+            Development. You can hire us for
             just one talent or hire a whole team of developers for your project.</p>
         <div data-aos="fade-left">
             <button>Book a Call</button>
@@ -108,61 +116,99 @@
     </section>
 
     <section id="services">
-
         <h1>CORE SERVICES</h1>
         <div id="service">
             <div class="card" data-aos="flip-up">
-                <i class="bi bi-pc-display"></i>
-                <h3>UI and UX Designs</h3>
-                <p>Are you seeking a design team that demonstrates transparency throughout the design process and
-                    delivers high-quality results at a reasonable cost? With a team of designers who have experience
-                    across many specialties, we can meet your needs. Our specialties include responsive web solutions,
-                    corporate identity design, print design, user experience (UX) strategy, motion graphics, and
-                    consulting.</p>
-                <button>Khow More</button>
+                <div class="card-top">
+                    <i class="bi bi-pc-display"></i>
+                    <h3>UI and UX Designs</h3>
+                </div>
+                <div class="card-body">
+                    <p>Are you seeking a design team that demonstrates transparency throughout the design process and
+                        delivers high-quality results at a reasonable cost? With a team of designers who have experience
+                        across many specialties, we can meet your needs. Our specialties include responsive web
+                        solutions,
+                        corporate identity design, print design, user experience (UX) strategy, motion graphics, and
+                        consulting.</p>
+                    <button>Khow More</button>
+                </div>
             </div>
             <div class="card" data-aos="flip-up">
-                <i class="bi bi-cloud-arrow-up-fill"></i>
-                <h3>DevOps and Cloud</h3>
-                <p>The sophisticated DevOps and Cloud solutions offered by our dedicated team intend to maximize ROI as
-                    well as simplify development at a reduced cost. Our aim is to attain cloud-enabled transformation of
-                    our clients' businesses and offer end-to-end testing, monitoring, and maintenance.</p>
-                <button>Khow More</button>
+                <div class="card-top">
+                    <i class="bi bi-cloud-arrow-up-fill"></i>
+                    <h3>DevOps and Cloud</h3>
+                </div>
+                <div class="card-body">
+                    <p>The sophisticated DevOps and Cloud solutions offered by our dedicated team intend to maximize ROI
+                        as
+                        well as simplify development at a reduced cost. Our aim is to attain cloud-enabled
+                        transformation of
+                        our clients' businesses and offer end-to-end testing, monitoring, and maintenance.</p>
+                    <button>Khow More</button>
+                </div>
             </div>
             <div class="card" data-aos="flip-up">
-                <i class="bi bi-clipboard2-check"></i>
-                <h3>Quality Assurance</h3>
-                <p>We perform manual and automation testing followed by project assessments, to ensure that solutions
-                    run smoothly. It is our goal to deliver a robust software application that solves (and exceeds) your
-                    requirements by performing end-to-end testing. Certified QA analysts are involved in this process to
-                    ensure that no bugs escape our end-to-end testing procedure.</p>
-                <button>Khow More</button>
+                <div class="card-top">
+                    <i class="bi bi-clipboard2-check"></i>
+                    <h3>Quality Assurance</h3>
+                </div>
+                <div class="card-body">
+                    <p>We perform manual and automation testing followed by project assessments, to ensure that
+                        solutions
+                        run smoothly. It is our goal to deliver a robust software application that solves (and exceeds)
+                        your
+                        requirements by performing end-to-end testing. Certified QA analysts are involved in this
+                        process to
+                        ensure that no bugs escape our end-to-end testing procedure.</p>
+                    <button>Khow More</button>
+                </div>
             </div>
             <div class="card" data-aos="flip-up">
-                <i class="bi bi-phone"></i>
-                <h3>Mobile App Development</h3>
-                <p>The latest tech stack is used to build native and hybrid apps for both iOS and Android platforms. We
-                    have specializations in a wide range of areas including healthcare, fintech, edtech, streaming, etc.
-                    Our team offers you a custom mobile app with an exotic user experience that fulfills the
-                    ever-changing needs of all stakeholders.</p>
-                <button>Khow More</button>
+                <div class="card-top">
+                    <i class="bi bi-phone"></i>
+                    <h3>Mobile App Development</h3>
+                </div>
+                <div class="card-body">
+
+
+                    <p>The latest tech stack is used to build native and hybrid apps for both iOS and Android platforms.
+                        We
+                        have specializations in a wide range of areas including healthcare, fintech, edtech, streaming,
+                        etc.
+                        Our team offers you a custom mobile app with an exotic user experience that fulfills the
+                        ever-changing needs of all stakeholders.</p>
+                    <button>Khow More</button>
+                </div>
             </div>
             <div class="card" data-aos="flip-up">
-                <i class="bi bi-laptop"></i>
-                <h3>Web Development</h3>
-                <p>To build custom web applications that suit your business, we prefer adhering to the latest
-                    technologies and development practices. We devise and develop each application from scratch based on
-                    your unique business requirements.</p>
-                <button>Khow More</button>
+                <div class="card-top">
+                    <i class="bi bi-laptop"></i>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="card-body">
+                    <p>To build custom web applications that suit your business, we prefer adhering to the latest
+                        technologies and development practices. We devise and develop each application from scratch
+                        based on
+                        your unique business requirements.</p>
+                    <button>Khow More</button>
+                </div>
             </div>
             <div class="card" data-aos="flip-up">
-                <i class="bi bi-cpu"></i>
-                <h3>Custom Software Development</h3>
-                <p>We provide you with result-oriented, high-quality and technology-driven custom software development
-                    solutions. The experts and skilled developers associated with our team help you align and develop
-                    solutions that empower your business to achieve a competitive advantage. We have already
-                    demonstrated the ability to serve multiple industries.</p>
-                <button>Khow More</button>
+                <div class="card-top">
+                    <i class="bi bi-cpu"></i>
+                    <h3>Custom Software Development</h3>
+                </div>
+                <div class="card-body">
+
+
+                    <p>We provide you with result-oriented, high-quality and technology-driven custom software
+                        development
+                        solutions. The experts and skilled developers associated with our team help you align and
+                        develop
+                        solutions that empower your business to achieve a competitive advantage. We have already
+                        demonstrated the ability to serve multiple industries.</p>
+                    <button>Khow More</button>
+                </div>
             </div>
 
         </div>
@@ -196,15 +242,17 @@
                 serve you feel free to contact with us you can ask any type of question about the website and we are
                 always available for you. We work is to serve you feel free to contact with us</p>
         </div>
-        <form>
-            <input type="text" placeholder="Name">
-            <textarea placeholder="Description"></textarea>
-            <div>
-                <button>
-                    Submit
-                </button>
-            </div>
-        </form>
+        <div>
+            <form>
+                <input type="text" placeholder="Name">
+                <textarea placeholder="Description"></textarea>
+                <div>
+                    <button>
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
     </section>
 
 
