@@ -29,3 +29,9 @@
     }
   }
 }
+
+@media (max-width:500px) {
+  #book-a-call{
+    padding: 30px;
+  }
+}

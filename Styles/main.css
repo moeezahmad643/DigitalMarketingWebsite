@@ -13,6 +13,7 @@
     border: 1px solid #221b00;
     border-radius: 2px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.509);
+    transition: all 0.2s;
     & h3 {
       font-size: x-large;
     }
@@ -33,6 +34,9 @@
       display: grid;
       place-items: center;
     }
+  }
+  & div:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.829);
   }
 }
 
